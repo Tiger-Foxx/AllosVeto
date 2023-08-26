@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name='theme-color' content='#1ebba3'> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Allo's Veto - plateforme de vétérinaire</title>
+<meta name="author" content="tansh">
+<meta name="description" content="HTML Teamplate">
+<meta name="keywords" content="start up, business, one page">
+{% load static %}
+<!-- FAVICON FILES -->
+<link href="{%static 'assets/images/icons/apple-touch-icon-144-precomposed.png' %}" rel="apple-touch-icon" sizes="144x144">
+<link href="{%static 'assets/images/icons/apple-touch-icon-120-precomposed.png' %}" rel="apple-touch-icon" sizes="120x120">
+<link href="{%static 'assets/images/icons/apple-touch-icon-76-precomposed.png' %}" rel="apple-touch-icon" sizes="76x76">
+<link href="{%static 'assets/images/icons/favicon.png' %}" rel="shortcut icon">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+<!-- CSS FILES -->
+<link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{%static 'assets/fonts/iconfonts.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/plugins.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/responsive.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/color.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/profile.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/service.css' %}">
+</head>
+<body>
+<div id="dtr-wrapper" class="clearfix"> 
+    
+    <!-- preloader starts -->
+    <div class="dtr-preloader">
+        <div class="dtr-preloader-inner">
+            <div class="dtr-preloader-img"></div>
+            <div class="dtr-preloader-text" style="padding: 5px;font-weight: bold; color: azure;"> ALLO'S VETO ...</div>
+        </div>
+    </div>
+    <!-- preloader ends --> 
+    
+    <!-- Small Devices Header 
+============================================= -->
+    <div class="dtr-responsive-header fixed-top">
+        <div class="container"> 
+            
+            <!-- small devices logo --> 
+            <a href="{% url 'index'%}"><img src="{%static 'assets/images/logo-dark.png' %}" alt="logo" style="width: 250px;"></a> 
+            <!-- small devices logo ends --> 
+            
+            <!-- menu button -->
+            <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+        </div>
+        <div class="dtr-responsive-header-menu"></div>
+    </div>
+    <!-- Small Devices Header ends 
+============================================= --> 
+    
+    <!-- Header 
+============================================= -->
+    <header id="dtr-header-global" class="fixed-top trans-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between"> 
+                
+                <!-- header left starts -->
+                <div class="dtr-header-left"> 
+                    
+                    <!-- logo --> 
+                    <a class="logo-default dtr-scroll-link" href="{% url 'index'%}"><img src="{%static 'assets/images/logo-dark.png' %}" alt="logo" width="173"></a> 
+                    
+                    <!-- logo on scroll --> 
+                    <a class="logo-alt dtr-scroll-link" href="{% url 'index'%}"><img src="{%static 'assets/images/logo-dark.png' %}" alt="logo" width="173"></a> 
+                    <!-- logo on scroll ends --> 
+                    
+                </div>
+                <!-- header left ends --> 
+                
+                <!-- menu starts-->
+                <div class="dtr-header-right ml-auto">
+                    <div class="main-navigation dtr-menu-dark">
+                        <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
+                            <li> <a class="nav-link" href="{% url 'index'%}">Accueil</a> </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- menu ends --> 
+                
+                <!-- header button starts --> 
+                <a href="{% url 'diagnostique'%}" class="dtr-btn dtr-btn-styled btn-red  dtr-ml-30">Consultation</a> 
+                <!-- header button ends --> 
+                
+            </div>
+        </div>
+    </header>
+    <!-- header ends
+================================================== --> 
+
+
+
+
+
+<div style="text-align: center; height: 50em;background-color: rgba(0, 0, 0, 0.582);"><h2 style="color: rgb(243, 5, 5); padding-top: 20%; font-size: 2em;">ECHEC DE L'ENVOIE DU FORMULAIRE!!!<p style="font-size: 1.5em;">ASSUREZ VOUS D'AVOIR CORRECTEMENT REMPLI LES CHAMPS</p></h2></div>
+
+
+
+
+
+
+        <!-- footer section starts
+================================================== -->
+<footer id="dtr-footer">
+    <div class="container"> 
+        
+        <!--== row starts ==-->
+        <div class="row"> 
+            
+            <!-- column 1 starts -->
+            <div class="col-12 col-sm-6 col-lg-5 small-device-space"> <img src="{% static 'assets/images/logo-dark.png' %}" style='width:200px;' alt="image" class="dtr-mb-30">
+                <p class="dtr-mb-30">Trouvez un service vétérinaire de qualité<br>
+                    parce que nos animaux comptent</p>
+                <p>© 2023  Fox-numerique Touts droits réservés</p>
+                
+                        <!-- social starts -->
+                        {% for info in infos %}
+                        <div class="dtr-social-square dtr-mt-20">
+                            <ul class="dtr-social dtr-social-list text-left">
+                                <li><a href="{{info.twitter}}" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                <li><a href="{{info.facebook}}" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                                <li><a href="{{info.email}}" class="dtr-google" target="_blank" title="google"></a></li>
+                            </ul>
+                        </div>
+                        {% endfor %}
+                        <!-- social ends --> 
+                
+            </div>
+            <!-- column 1 ends --> 
+            
+            <!-- column 2 starts -->
+            <div class="col-12 col-sm-6 col-lg-2 small-device-space">
+                <h5>lien Rapide</h5>
+                <ul class="dtr-list">
+                    <li><a href="https://fox-s.netlify.app/">Fox(concepteurs)</a></li>
+                </ul>
+            </div>
+            <!-- column 2 ends --> 
+            
+            <!-- column 3 starts -->
+            <div class="col-12 col-sm-6 col-lg-2 small-device-space">
+                <h5>Company</h5>
+                <ul class="dtr-list">
+                    <li><a href="/#about">About Us</a></li>
+                    <li><a href="/#team">Our Team</a></li>
+                    <li><a href="/#blog">news & Articles</a></li>
+                    <li><a href="/#Contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- column 3 ends --> 
+                    <!-- column 4 starts -->
+                    {% for info in infos %}
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <h5>Contact Us</h5>
+                        <p>{{info.lieu}}</p>
+                        <p><a href="#"><i class="icon-envelope dtr-mr-5 color-blue"></i>{{info.email}}</a></p>
+                        <p><i class="icon-phone-alt dtr-mr-5 color-blue"></i>{{info.numero}}</p>
+                    </div>
+                    {% endfor %}
+                    <!-- column 4 ends --> 
+            
+        </div>
+        <!--== row ends ==--> 
+        
+    </div>
+</footer>
+<!-- footer section ends
+================================================== --> 
+
+</div>
+<!-- == main content area ends == --> 
+
+</div>
+<!-- #dtr-wrapper ends --> 
+
+<!-- JS FILES --> 
+<script src="{% static 'assets/js/jquery.min.js' %}"></script> 
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'assets/js/plugins.js' %}"></script> 
+<script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name='theme-color' content='#1ebba3'> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Allo's Veto - plateforme de vétérinaire</title>
+<meta name="author" content="tansh">
+<meta name="description" content="HTML Teamplate">
+<meta name="keywords" content="start up, business, one page">
+{% load static %}
+<!-- FAVICON FILES -->
+<link href="{%static 'assets/images/icons/apple-touch-icon-144-precomposed.png' %}" rel="apple-touch-icon" sizes="144x144">
+<link href="{%static 'assets/images/icons/apple-touch-icon-120-precomposed.png' %}" rel="apple-touch-icon" sizes="120x120">
+<link href="{%static 'assets/images/icons/apple-touch-icon-76-precomposed.png' %}" rel="apple-touch-icon" sizes="76x76">
+<link href="{%static 'assets/images/icons/favicon.png' %}" rel="shortcut icon">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+<!-- CSS FILES -->
+<link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{%static 'assets/fonts/iconfonts.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/plugins.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/responsive.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/color.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/profile.css' %}">
+<link rel="stylesheet" href="{%static 'assets/css/service.css' %}">
+</head>
+<body>
+<div id="dtr-wrapper" class="clearfix"> 
+    
+    <!-- preloader starts -->
+    <div class="dtr-preloader">
+        <div class="dtr-preloader-inner">
+            <div class="dtr-preloader-img"></div>
+            <div class="dtr-preloader-text" style="padding: 5px;font-weight: bold; color: azure;"> ALLO'S VETO ...</div>
+        </div>
+    </div>
+    <!-- preloader ends --> 
+    
+    <!-- Small Devices Header 
+============================================= -->
+    <div class="dtr-responsive-header fixed-top">
+        <div class="container"> 
+            
+            <!-- small devices logo --> 
+            <a href="{% url 'index'%}"><img src="{%static 'assets/images/logo-dark.png' %}" alt="logo" style="width: 250px;"></a> 
+            <!-- small devices logo ends --> 
+            
+            <!-- menu button -->
+            <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+        </div>
+        <div class="dtr-responsive-header-menu"></div>
+    </div>
+    <!-- Small Devices Header ends 
+============================================= --> 
+    
+    <!-- Header 
+============================================= -->
+    <header id="dtr-header-global" class="fixed-top trans-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between"> 
+                
+                <!-- header left starts -->
+                <div class="dtr-header-left"> 
+                    
+                    <!-- logo --> 
+                    <a class="logo-default dtr-scroll-link" href="#home"><img src="{%static 'assets/images/logo-dark.png' %}" alt="logo" width="173"></a> 
+                    
+                    <!-- logo on scroll --> 
+                    <a class="logo-alt dtr-scroll-link" href="#home"><img src="{%static 'assets/images/logo-dark.png' %}" alt="logo" width="173"></a> 
+                    <!-- logo on scroll ends --> 
+                    
+                </div>
+                <!-- header left ends --> 
+                
+                <!-- menu starts-->
+                <div class="dtr-header-right ml-auto">
+                    <div class="main-navigation dtr-menu-dark">
+                        <ul class="sf-menu dtr-scrollspy dtr-nav dark-nav-on-load dark-nav-on-scroll">
+                            <li> <a class="nav-link" href="#home">Accueil</a> </li>
+                            <li> <a class="nav-link" href="#features">Pourquoi ?</a> </li>
+                            <li> <a class="nav-link" href="#about">A propos</a> </li>
+                            <li> <a class="nav-link" href="#team">Equipe</a> </li>
+                            <li> <a class="nav-link" href="#blog">Blog</a> </li>
+                            <li> <a class="nav-link" href="#features2">service</a> </li>
+                            <li> <a class="nav-link" href="#whaGroups">Ventes</a> </li>
+                            <li> <a class="nav-link" href="#contact">Rendez-vous</a> </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <!-- menu ends --> 
+                
+                <!-- header button starts --> 
+                <a href="{% url 'diagnostique'%}" class="dtr-btn dtr-btn-styled btn-red  dtr-ml-30">Consultation</a> 
+                <!-- header button ends --> 
+                
+            </div>
+        </div>
+    </header>
+    <!-- header ends
+================================================== --> 
+    
+    <!-- == main content area starts == -->
+    <div id="dtr-main-content"> 
+        
+        <!-- hero section starts
+================================================== -->
+        <section id="home" class="dtr-section dtr-hero-section-top-padding dtr-pb-100 parallax bg-light-blue" style="background-image: url({%static 'assets/images/hero-bg.png' %});">
+            <div class="container"> 
+                
+                <!--== row starts ==-->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- Heading -->
+                        <h1>Ton Vétérinaire... <br>
+                            <span class="color-blue">Même à distance !!!</span></h1>
+                        
+                        <!-- Text -->
+                        <p>Fini les Problèmes de Distance de temps, ou de médecin ! 
+                            Allô Véto te fournit le meilleur service vétérinaire pour ton élevage ou tes animaux de compagnie ! </p>
+                        
+                        <!-- button --> 
+                        <a href="#about" class="dtr-btn dtr-btn-styled btn-green dtr-mt-10">En savoir plus</a> {% for info in infos %}<a class="dtr-btn btn-blue dtr-icon-btn dtr-video-popup dtr-mt-10" data-autoplay="true" data-vbtype="video" href="{{info.lienVideoTravail}}">{% endfor %}<i class="icon-play1"></i></a>
+                        <p class="text-size-xs dtr-mt-10">Faisons évoluer les choses.</p>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6 small-device-space"> 
+                        
+                        <!--=== img slider - 1col starts ===-->
+                        <div class="dtr-slick-slider dtr-img-slider-1col"> 
+                            <!-- img 1 -->
+                            <div> <img src="{%static 'assets/images/ai-img3.png' %}" alt="image"> </div>
+                            <!-- img 2 -->
+                            <div> <img src="{%static 'assets/images/ai-img2.png' %}" alt="image"> </div>
+                            <!-- img 3 -->
+                            <div> <img src="{%static 'assets/images/ai-img1.png' %}" alt="image"> </div>
+                        </div>
+                        <!--=== img slider - 1col ends ===--> 
+                        
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </section>
+        <!-- hero section ends
+================================================== --> 
+        
+        <!-- logo carousel section starts
+================================================== -->
+        <section class="dtr-section dtr-py-50">
+            <div class="container"> 
+                
+                <!--== row starts ==-->
+                <div class="row">
+                    <div class="col-12 col-md-10 offset-md-1"> 
+                        
+                        <!--=== img slider - 3col starts ===-->
+                        <div class="dtr-slick-slider dtr-img-slider-6col"> 
+                            {% for partner in partners %}
+                            <!-- img 1 -->
+                            <div> <a href="{{partner.site}}"><img src="{{partner.image.url}}" alt="{{partner.name}}" style="width:142px; height:42px ;"></a> </div>
+                            <!-- img 2 -->
+                            {% endfor %}
+                        </div>
+                        <!--=== img slider - 3col ends ===--> 
+                        
+                    </div>
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </section>
+        <!-- logo carousel section ends
+================================================== --> 
+        
+        <!-- features section starts
+================================================== -->
+        <section id="features" class="dtr-section dtr-pt-50 dtr-pb-70">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading text-center">
+                    <h2>Pourquoi Tout le monde Aime <br>
+                        <b style="color: rgb(45, 136, 221);">Allo's Véto</b></h2>
+                </div>
+                <!-- heading ends --> 
+                
+                <!--== row starts ==-->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature">
+                        <h3><span class="color-blue">1.</span> Facilité d’accès </h3>
+                        <p class="font-style-italic">Sur le web , tout est possible</p>
+                        <img src="{%static 'assets/images/rendezvous.png' %}" alt="image">
+                        <p>Prenez rendez-vous en ligne et contactez le vétérinaire à tout moment. </p>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature">
+                        <h3><span class="color-blue">2.</span> Suivi personnalisé </h3>
+                        <p class="font-style-italic">Allo's véto est ton amis</p>
+                        <img src="{%static 'assets/images/suivi.png' %}" alt="image">
+                        <p>
+                           recevez des conseils personnalisé pour votre animal ou votre ferme
+                        </p>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature">
+                        <h3><span class="color-blue">3.</span> Information </h3>
+                        <p class="font-style-italic">Sois sure de ce que tu lis</p>
+                        <img src="{%static 'assets/images/info.png' %}" alt="image">
+                        <p>Accédez à une FAQ et découvrez la clinique et son équipe. </p>
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </section>
+        <!-- features section ends
+================================================== --> 
+        
+        <!-- cta section starts
+================================================== -->
+        <section class="dtr-section dtr-py-100 bg-light-blue parallax" style="background-image: url({%static 'assets/images/cta-bg.png' %});">
+            <div class="container"> 
+                
+                <!--== row starts ==-->
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6">
+                        <p>Par des vétérinaires Camerounais </p>
+                        <h4>Un service de qualité , des professionels sertifiés , et une Totale disponibilité</h4>
+                    </div>
+                    <div class="col-12 col-md-6 text-md-right"> <a href="#contact" class="dtr-btn dtr-btn-styled btn-red">Prenez rendez-vous</a> <a href="#blog" class="dtr-btn-flat btn-flat-blue dtr-ml-5">Voir les Nouvelles</a> </div>
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </section>
+        <!-- cta section ends
+================================================== --> 
+        
+        <!-- about section starts
+================================================== -->
+        <section id="about" class="dtr-section">
+            <div class="container"> 
+                
+                <!--== row 1 starts ==-->
+                <div class="row dtr-pt-100"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6 small-device-space"> <img src="{% static 'assets/images/ai-img4.png' %}" alt="image"> </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6">
+                        <div class="dtr-pl-30">
+                            <h2>Nous vendons aussi des produits médicaux et autres </h2>
+                            <p>All’o veto vous propose également un service de vente de produits pour votre animal. 
+                                Vous pouvez consulter notre catalogue sur WhatsApp Business et commander les articles de votre choix. 
+                                Nous vous livrons à domicile ou en point relais, selon votre préférence.
+                                 Voici trois points qui font de ce service un avantage pour vous et votre animal : </p>
+                            <ul class="dtr-icon-list dtr-my-20">
+                                <li><i class="icon-check-circle2 color-blue"></i>Variété de produits</li>
+                                <li><i class="icon-check-circle2 color-blue"></i>Prix attractifs</li>
+                                <li><i class="icon-check-circle2 color-blue"></i>Satisfaction garantie</li>
+                            </ul>
+                            <a href="#testimonial" class="dtr-btn-small btn-light-blue dtr-scroll-link"><span>Revoir</span> voir tous les retours</a> </div>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--== row 1 ends ==--> 
+                
+                <!--== row 2 starts ==-->
+                <div class="row dtr-mt-100"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6">
+                        <div class="dtr-pr-30">
+                            <h2>Nous traitons vos betes et fournissons une assistance dans l'elevage</h2>
+                            <p class="dtr-mb-30">All’o veto est plus qu’une simple clinique vétérinaire. Nous vous accompagnons également dans l’élevage de vos bêtes,
+                                 qu’il s’agisse de bovins, d’ovins, de caprins, de porcins, de volailles ou d’autres animaux.Nous vous formons aux bonnes pratiques d’élevage, en respectant le bien-être animal et l’environnement. 
+                                 Nous vous proposons des sessions théoriques et pratiques, adaptées à votre niveau et à vos besoins.
+                                  Nous vous assurons également un suivi régulier et personnalisé de votre élevage.</p>
+                                  {%  for service in services %}
+                                    <span class="dtr-tag"><a href="https://www.google.com/search?query={{service.name}}">{{service.name}}</a></span>
+                                {%  endfor %}
+
+                        </div>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6 small-device-space"> <img src="{% static 'assets/images/ai-img5.png' %}" alt="image"> </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--== row 2 ends ==--> 
+                
+            </div>
+        </section>
+        <!-- about section ends
+================================================== --> 
+        
+        <!-- testimonial section starts
+================================================== -->
+        <section id="testimonial" class="dtr-section dtr-py-100"> 
+            
+            <!-- heading starts -->
+            <div class="dtr-styled-heading text-center">
+                <h2>Nos Clients Nous aiment</h2>
+                <p>Chez Allo's véto , la satisfaction du client est un Priorité indiscutable et même sacrée<br>
+                    un bon nombre de clients satisfaits , dont certains qui laissent des témoignages</p>
+            </div>
+            <!-- heading ends --> 
+            
+            <!--===== testimonial slider starts =====-->
+            <div class="dtr-slick-slider dtr-testimonial-slider dtr-my-50"> 
+                
+                {% for tem in temoignages %}
+                <!--== slide 1 starts ==-->
+                <div class="dtr-testimonial">
+                    <div class="dtr-testimonial-content clearfix">
+                        <p>“{{tem.contenu}}” </p>
+                        
+                        <!-- client info -->
+                        <div class="dtr-client-info clearfix">
+                            <div class="dtr-testimonial-user"><span class="dtr-testimonial-icon"></span> <img src="{%static 'assets/images/profile.png' %}" alt="image" style="width: 50px; height: 60px;"> </div>
+                            <div class="dtr-testimonial-user-info">
+                                <h6 class="dtr-client-name">{{tem.nom}}</h6>
+                                <span class="dtr-client-job">{{tem.profession}}</span> </div>
+                        </div>
+                        <!-- client info ends --> 
+                    </div>
+                </div>
+                <!--== slide 1 ends ==--> 
+                {% endfor %}
+                
+            </div>
+            <!--===== testimonial slider ends =====-->
+            
+            <p class="text-size-md text-center color-blue">Une Note Parfaite Pour notre service de Vétérinaire</p>
+            <div class="dtr-testimonial-stars dtr-stars-5 color-red text-center dtr-mt-30"></div>
+        </section>
+        <!-- testimonial section ends
+================================================== --> 
+        
+        <!-- features section starts
+================================================== -->
+        <section id="features2" class="dtr-section dtr-pt-100 dtr-pb-70 bg-light-blue parallax" style="background-image: url({% static 'assets/images/features-bg.png' %});">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading text-center">
+                    <h2>Par des méthodes très efficaces<br>
+                        Faites confiance en notre Travail</h2>
+                </div>
+                <!-- heading ends --> 
+                
+                <!--== row 1 starts ==-->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature-style2">
+                        <div class="dtr-feature-style2-head"> <i class='bx bx-info-circle' style="font-size: 3em;" ></i>
+                            <h4 class="dtr-feature-style2-heading">La téléconsultation</h4>
+                        </div>
+                        <p>Nous vous permettons de consulter un vétérinaire à distance, par chat ou par vidéo, sans avoir à vous déplacer.
+                             Vous pouvez ainsi obtenir un diagnostic rapide, un conseil adapté et une ordonnance si nécessaire.</p>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature-style2">
+                        <div class="dtr-feature-style2-head"><i class='bx bx-info-circle' style="font-size: 3em;" ></i>
+                            <h4 class="dtr-feature-style2-heading">La prise de rendez-vous en ligne: </h4>
+                        </div>
+                        <p>Nous vous offrons la possibilité de prendre rendez-vous avec le vétérinaire de votre choix en quelques clics, en fonction de ses disponibilités et de vos préférences. 
+                        </p>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature-style2">
+                        <div class="dtr-feature-style2-head"><i class='bx bx-info-circle' style="font-size: 3em;" ></i>
+                            <h4 class="dtr-feature-style2-heading">La vente de produits en ligne:</h4>
+                        </div>
+                        <p>Nous vous proposons un service de vente de produits pour votre animal, que vous pouvez commander depuis notre catalogue sur WhatsApp Business.
+                             Nous vous livrons à domicile ou en point relais, selon votre convenance.</p>
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                </div>
+                <!--== row 1 ends ==--> 
+                
+                <!--== row 2 starts ==-->
+                <div class="row dtr-mt-40"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4 offset-md-2 dtr-img-feature-style2">
+                        <div class="dtr-feature-style2-head"><i class='bx bx-info-circle' style="font-size: 3em;" ></i>
+                            <h4 class="dtr-feature-style2-heading">La formation et le suivi des éleveurs:</h4>
+                        </div>
+                        <p>Nous vous accompagnons dans l’élevage de vos bêtes, en vous formant aux bonnes pratiques et en vous assurant un suivi régulier et personnalisé.
+                             Nous vous aidons à optimiser la nutrition, la reproduction et la santé de vos animaux.</p>
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-4 dtr-img-feature-style2">
+                        <div class="dtr-feature-style2-head"><i class='bx bx-info-circle' style="font-size: 3em;" ></i>
+                            <h4 class="dtr-feature-style2-heading">L’utilisation des technologies avancées</h4>
+                        </div>
+                        <p> Nous disposons d’un matériel moderne et performant pour réaliser des interventions chirurgicales, des radiographies, des échographies, des analyses, etc. 
+                            Nous utilisons également des logiciels innovants pour gérer notre plateforme et notre clinique.</p>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--== row 2 ends ==--> 
+                
+            </div>
+        </section>
+        <!-- features section ends
+================================================== --> 
+<!-- heading starts -->
+<div class="dtr-styled-heading text-center" style="padding: 2em;" id='team'>
+    <h2>l'Equipe d'Allo's Veto</h2>
+    <p>Une trasparence totale reigne dans le service d'Allo's Veto <br>
+        Raison pour laquelle nos clients nous fonts confiance et nous vous présentons nos membres</p>
+</div>
+<!-- heading ends --> 
+<section id="profileCards">
+
+{% for team in teams %}
+
+  <div class="card">
+      <div class="image">
+          <img src="{{team.photo.url}}" alt="profilepic" class="profilepic">
+      </div>
+      <div class="data-text">
+          <div class="title">{{team.nom}}</div>
+          <div class="desc">{{team.poste}}</div>
+      </div>
+      <div class="media-buttons">
+          <a href="{{team.facebook}}" style="background-color: #4267B2;" class="link">
+              <i class='bx bxl-facebook' ></i>
+          </a>
+          <a href="{{team.insta}}" style="background-color: #FD1D1D;" class="link">
+              <i class='bx bxl-instagram' ></i>
+          </a>
+          <a href="{{team.twitter}}" style="background-color: #1DA1F2;" class="link">
+              <i class='bx bxl-twitter' ></i>
+          </a>
+          <a href="https://wa.me/{{team.whatsapp}}" style="background-color:#25D366;" class="link">
+              <i class='bx bxl-whatsapp' ></i>
+          </a>
+      </div>
+      <div class="buttons">
+          <a  href="{{team.site}}" class="button" >see</a>
+      </div>
+  </div>
+  {% endfor %}
+
+</section>
+        
+        <!-- pricing section starts & FAQ
+================================================== -->
+
+<!-- heading starts -->
+<div class="dtr-styled-heading text-center" id='whaGroups'>
+     <h2>Groupes <b style="color: #25D366;">Whatsapp</b> de vente Allo's Veto</h2>
+    <p>intégrez nos groupes whatsapp de ventes et nos catalogues whatsapp business<br>
+        Vous y trouverez bons nombres de produits et d'animaux dans un commerce saint et sans encombres</p>
+</div>
+<!-- heading ends --> 
+
+<!-- GROUPES WHATSAPP  --> 
+<section id="serviceCards">
+    {% for group in whagroups %}
+    <div class="card">
+        <div class="image">
+            <img src="{{group.image.url}}" alt="{{group.Titre}}">
+        </div>
+        <div class="data-text">
+            <div class="title">{{group.Titre}}</div>
+            <div class="desc">{{group.description}}</div>
+        </div>
+        <div class="buttons">
+            <a class="button" href="{{group.lien}}">join</a>
+        </div>
+    </div>
+   {% endfor %}
+
+</section>
+
+
+<section id="pricing" class="dtr-section dtr-py-100">
+            <div class="container">   
+                <!--== faq starts ==-->
+                <h3 class="dtr-mt-20 dtr-mb-40 text-center">Questions Frequements Posées à Allo's Veto </h3>
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h5 class="faq-heading color-blue">Comment prendre rendez-vous avec un vétérinaire ? </h5>
+                            <div class="faq-content">Vous pouvez prendre rendez-vous avec le vétérinaire de votre choix en utilisant notre plateforme en ligne. 
+                                Il vous suffit de vous rendre dans la section 'contact', de choisir le service, la date et l’heure qui vous conviennent, et de confirmer votre réservation. Vous recevrez un email de confirmation avec les détails de votre rendez-vous.
+                            </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h5 class="faq-heading color-blue">Comment contacter un vétérinaire en cas d’urgence ?
+                            </h5>
+                            <div class="faq-content">Si vous avez besoin d’une assistance vétérinaire urgente, vous pouvez contacter un vétérinaire par chat ou par vidéo, en utilisant notre service de téléconsultation whatsapp.
+                                 Vous pourrez ainsi obtenir un diagnostic rapide, un conseil adapté et une ordonnance si nécessaire.
+                                 Vous pouvez également nous appeler au numéro indiqué sur notre site web.</div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-md-6"> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item small-device-space">
+                            <h5 class="faq-heading color-blue">Comment donner mon avis sur All’o veto ?</h5>
+                            <div class="faq-content">Nous apprécions vos commentaires et vos suggestions sur notre plateforme et notre clinique. Vous pouvez nous donner votre avis en remplissant le formulaire de satisfaction</div>
+                        </div>
+                        <!-- faq item ends --> 
+                        
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h5 class="faq-heading color-blue">Comment commander des produits pour mon animal ?</h5>
+                            <div class="faq-content">Vous pouvez commander des produits pour votre animal en utilisant notre service de vente en ligne.
+                                 Vous pouvez consulter notre catalogue sur WhatsApp Business et choisir les articles de votre choix.
+                                  Vous pourrez ensuite payer en ligne ou à la livraison, selon votre préférence. Nous vous livrerons à domicile ou en point relais, selon votre convenance.
+                            </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        {% for faq in FAQs %}
+                        <!-- faq item starts -->
+                        <div class="faq-item">
+                            <h5 class="faq-heading color-blue">{{faq.question}} ?</h5>
+                            <div class="faq-content">
+                                {{faq.reponse}}
+                            </div>
+                        </div>
+                        <!-- faq item ends --> 
+                        {% endfor %}
+
+                        
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                </div>
+                <!--== faq ends ==--> 
+                
+            </div>
+</section>
+<!-- pricing section ends
+================================================== --> 
+        
+        <!-- process section starts
+================================================== -->
+        <section class="dtr-section dtr-py-100 bg-light-blue dtr-section-with-bg dtr-bg-size-auto dtr-bg-position-bottom" style="background-image: url({% static 'assets/images/illustration2.png' %});">
+            <div class="container">
+                <h2 class="text-center dtr-mb-40">Tout de passe en <span class="color-blue">3 étapes simple</span></h2>
+                
+                <!--== row starts ==-->
+                <div class="row">
+                    <div class="col-12 col-lg-8 offset-lg-2">
+                        <div class="dtr-process d-flex flex-column flex-md-row justify-content-center">
+                            <div class="dtr-process-item">
+                                <div class="dtr-process-number"><span>1</span></div>
+                                <div class="dtr-process-content">
+                                    <h6>venez sur la plateforme<br>
+                                        ici même</h6>
+                                </div>
+                            </div>
+                            <div class="dtr-process-item">
+                                <div class="dtr-process-number"><span>2</span></div>
+                                <div class="dtr-process-content">
+                                    <h6>décrivez les symptomes<br>
+                                        dans le formulaire</h6>
+                                </div>
+                            </div>
+                            <div class="dtr-process-item">
+                                <div class="dtr-process-number"><span>3</span></div>
+                                <div class="dtr-process-content">
+                                    <h6>Attendez la réponse<br>
+                                        ou prenez rendez-vous</h6>
+                                </div>
+                            </div>
+                        </div>
+                        {% for info in infos %}
+                        <p class="text-center"> <a class="dtr-btn dtr-btn-styled btn-red dtr-video-popup" data-autoplay="true" data-vbtype="video" href="{{info.lienVideoTuto}}"><i class="icon-play-circle2 dtr-btn-left-icon"></i>voir comment ca marche</a></p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!--== row ends ==--> 
+                
+                <!-- empty div -->
+                <div style="height: 450px;"></div>
+            </div>
+        </section>
+        <!-- process section ends
+================================================== --> 
+        
+        <!-- blog section starts
+================================================== -->
+        <section id="blog" class="dtr-section dtr-py-100">
+            <div class="container"> 
+                
+                <!-- heading starts -->
+                <div class="dtr-styled-heading text-center">
+                    <h2>Nouvelles & Articles</h2>
+                </div>
+                <!-- heading ends --> 
+                
+                <!--== row starts ==-->
+                <div class="row dtr-mt-50"> 
+                    {% for post in posts %}
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-md-4"> 
+                        
+                        <!-- blog item 1 starts -->
+                        <div class="dtr-blog-item"> 
+                            <!-- image -->
+                            <div class="dtr-post-img"> <img src="{{post.image.url}}" alt="image" > </div>
+                            <div class="dtr-post-content"> <span class="dtr-category color-blue"><a href="{{post.joinPiece}}">{{post.theme}}</a></span>
+                                <h5><a href="{{post.joinPiece}}">{{post.title}}</a></h5>
+                                <!-- post meta -->
+                                <div class="dtr-post-meta">
+                                    <div class="dtr-meta-user"> <img src="{% static 'assets/images/profile.png' %}" alt="image" style="width:100px ;height:100px ;"> </div>
+                                    <div class="dtr-meta-info"> <span>{{post.date}}</span> <span>{{post.blogPoster}}</span> </div>
+                                </div>
+                                <!-- post meta ends --> 
+                                
+                            </div>
+                        </div>
+                        <!-- blog item 1 ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    {% endfor %}
+                    
+                </div>
+                <!--== row starts ==--> 
+                
+            </div>
+        </section>
+        <!-- blog section ends
+================================================== --> 
+        
+        <!-- contact section starts
+================================================== -->
+        <section id="contact" class="dtr-section bg-blue" style="background-image: url({% static 'assets/images/section-bg-img.jpg' %});"> 
+            
+            <!-- overlay to section -->
+            <div class="dtr-overlay dtr-overlay-blue"></div>
+            
+            <!-- content of section (on overlay) starts -->
+            <div class="dtr-py-100 dtr-overlay-content parallax" style="background-image: url({% static 'assets/images/form-bg.png' %});">
+                <div class="container"> 
+                    
+                    <!-- heading starts -->
+                    <div class="dtr-styled-heading text-center">
+                        <h2 class="color-white">Faites évoluer votre Production</h2>
+                        <p class="color-white">Prenez contact avec des experts qualifiés et certifiés<br>
+                            Pour la santé de vos animaux</p>
+                    </div>
+                    <!-- heading ends --> 
+                    
+                    <!--== row starts ==-->
+                    <div class="row">
+                        <div class="col-12 col-lg-8 offset-lg-2"> 
+                            
+                            <!-- form starts -->
+                            <div class="dtr-form dtr-p-50 dtr-border-5px dtr-rounded-xl bg-blue border-light-blue">
+                                <form id="contactform" method="post" action="{% url 'index'%}">
+                                    {% csrf_token %}
+                                    <fieldset>
+                                        <p>
+                                            <input name="email"  class="required email" type="text" placeholder="Email">
+                                        </p>
+                                        <div class="dtr-form-row dtr-form-row-2col clearfix">
+                                            <p class="dtr-form-column">
+                                                <input name="nom"  type="text" placeholder="Nom">
+                                            </p>
+                                            <p class="dtr-form-column">
+                                                <input name="ville"  type="text" placeholder="votre ville">
+                                            </p>
+                                            <p class="dtr-form-column">
+                                                <input name="quartier"  type="text" placeholder="votre quartier">
+                                            </p>
+                                        </div>
+                                        <p class="dtr-form-column" style="padding: 5px; ">
+                                            <label for="date">Date de rendez-vous souaithée:</label>
+                                            <input type="date" id="date" name="date" style="border-radius: 15%;">
+                                        </p>
+                                        <div class="dtr-form-row dtr-form-row-2col">
+                                            <p class="dtr-form-column">
+                                                <input name="whatsapp" class="number" type="text" placeholder="numéro de telephone(whatsapp)">
+                                            </p>
+                                            <p class="dtr-form-column" style="padding: 5px; ">
+                                                <label for="time">heure de rendez-vous souaithée:</label>
+                                                <input type="time" id="time" name="heure" style="border-radius: 15%;">
+                                            </p>
+                                            <p class="dtr-form-column">
+                                                <select name="status" class="dtr-select">
+                                                    <option value="">status</option>
+                                                    <option value="grand eleveur"> grand eleveur </option>
+                                                    <option value="amateur">amateur</option>
+                                                    <option value="animal de compagnie">animal de compagnie</option>
+                                                   
+                                                </select>
+                                            </p>
+                                        </div>
+                                        <p class="antispam">Leave this empty: <br />
+                                            <input name="url" />
+                                        </p>
+                                        <p>
+                                            <textarea rows="6" name="Message" id="message" class="required"  placeholder="Vous pouvez ajouter un commentaire ou un objet ici"></textarea>
+                                        </p>
+                                        <p class="text-center">
+                                            <button class="dtr-btn dtr-btn-styled btn-red" type="submit" >demander un rendez-vous</button>
+                                        </p>
+                                        <div id="result"></div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <!-- form ends --> 
+                            
+                        </div>
+                    </div>
+                    <!--== row ends ==--> 
+                    
+                </div>
+            </div>
+            <!-- content of section ends --> 
+            
+        </section>
+        <!-- contact section ends
+================================================== --> 
+        
+        <!-- footer section starts
+================================================== -->
+        <footer id="dtr-footer">
+            <div class="container"> 
+                
+                <!--== row starts ==-->
+                <div class="row"> 
+                    
+                    <!-- column 1 starts -->
+                    <div class="col-12 col-sm-6 col-lg-5 small-device-space"> <img src="{% static 'assets/images/logo-dark.png' %}" style='width:200px;' alt="image" class="dtr-mb-30">
+                        <p class="dtr-mb-30">Trouvez un service vétérinaire de qualité<br>
+                            parce que nos animaux comptent</p>
+                        <p>© 2023  Fox-numerique Touts droits réservés</p>
+                        
+                        <!-- social starts -->
+                        {% for info in infos %}
+                        <div class="dtr-social-square dtr-mt-20">
+                            <ul class="dtr-social dtr-social-list text-left">
+                                <li><a href="{{info.twitter}}" class="dtr-twitter" target="_blank" title="twitter"></a></li>
+                                <li><a href="{{info.facebook}}" class="dtr-facebook" target="_blank" title="facebook"></a></li>
+                                <li><a href="{{info.email}}" class="dtr-google" target="_blank" title="google"></a></li>
+                            </ul>
+                        </div>
+                        {% endfor %}
+                        <!-- social ends --> 
+                        
+                    </div>
+                    <!-- column 1 ends --> 
+                    
+                    <!-- column 2 starts -->
+                    <div class="col-12 col-sm-6 col-lg-2 small-device-space">
+                        <h5>lien Rapide</h5>
+                        <ul class="dtr-list">
+                            <li><a href="https://fox-s.netlify.app/">Fox(concepteurs)</a></li>
+                        </ul>
+                    </div>
+                    <!-- column 2 ends --> 
+                    
+                    <!-- column 3 starts -->
+                    <div class="col-12 col-sm-6 col-lg-2 small-device-space">
+                        <h5>Company</h5>
+                        <ul class="dtr-list">
+                            <li><a href="/#about">About Us</a></li>
+                            <li><a href="/#team">Our Team</a></li>
+                            <li><a href="/#blog">news & Articles</a></li>
+                            <li><a href="/#Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- column 3 ends --> 
+                    
+                    <!-- column 4 starts -->
+                    {% for info in infos %}
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <h5>Contact Us</h5>
+                        <p>{{info.lieu}}</p>
+                        <p><a href="#"><i class="icon-envelope dtr-mr-5 color-blue"></i>{{info.email}}</a></p>
+                        <p><i class="icon-phone-alt dtr-mr-5 color-blue"></i>{{info.numero}}</p>
+                    </div>
+                    {% endfor %}
+                    <!-- column 4 ends --> 
+                    
+                </div>
+                <!--== row ends ==--> 
+                
+            </div>
+        </footer>
+        <!-- footer section ends
+================================================== --> 
+        
+    </div>
+    <!-- == main content area ends == --> 
+    
+</div>
+<!-- #dtr-wrapper ends --> 
+
+<!-- JS FILES --> 
+<script src="{% static 'assets/js/jquery.min.js' %}"></script> 
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'assets/js/plugins.js' %}"></script> 
+<script src="{% static 'assets/js/custom.js' %}"></script>
+</body>
+</html>
